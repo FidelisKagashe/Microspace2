@@ -245,26 +245,28 @@ const Contact: React.FC = () => {
                 {t('whatsapp')}
               </a>
             </div>
-
             {/* Newsletter Signup */}
-            <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-8 border border-blue-200 dark:border-blue-800 transition-colors">
-              <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">{t('stayUpdated')}</h3>
-              <p className="text-blue-700 dark:text-blue-300 mb-4">
+            <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 sm:p-8 border border-blue-200 dark:border-blue-800 transition-colors mx-auto">
+              <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-3 sm:mb-4">
+                {t('stayUpdated')}
+              </h3>
+              <p className="text-blue-700 dark:text-blue-300 mb-4 text-sm sm:text-base">
                 Subscribe to our newsletter for the latest tech news, product updates, and exclusive offers.
               </p>
-              <div className="flex space-x-3">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:space-x-3 space-y-3 sm:space-y-0">
                 <input
                   type="email"
                   placeholder={t('yourEmailAddress')}
-                  className="flex-1 focus:outline-none px-4 py-2 border border-blue-300 dark:border-blue-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                  className="w-full flex-1 min-w-0 focus:outline-none px-4 py-2 border border-blue-300 dark:border-blue-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                 />
                 <button
-                  className="bg-blue-400 text-white px-6 py-2 rounded-lg hover:bg-blue-500 transition-colors"
+                  className="w-full sm:w-auto bg-blue-400 text-white px-6 py-2 rounded-lg hover:bg-blue-500 transition-colors"
                 >
                   {t('subscribe')}
                 </button>
               </div>
             </div>
+
           </div>
         </div>
       </div>
