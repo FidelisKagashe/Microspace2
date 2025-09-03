@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PictureInHero from '../Assets/picha ya ndani.jpg'
 interface PageHeaderProps {
   title: string;
   subtitle?: string;
@@ -9,7 +9,7 @@ interface PageHeaderProps {
 const PageHeader: React.FC<PageHeaderProps> = ({ 
   title, 
   subtitle, 
-  backgroundImage = 'https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg?auto=compress&cs=tinysrgb&w=1200'
+  backgroundImage = PictureInHero
 }) => {
   return (
     <div className="relative bg-gray-900 py-24 overflow-hidden">

@@ -2,11 +2,22 @@ import { Users, Award, Shield, Heart, Target, Eye } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import PageHeader from '../components/PageHeader';
 
+import InPicture from '../Assets/inpicture.jpg';
+import Inpicture2 from '../Assets/picha ya ndani.jpg'
+
+import InPictureMwanza from '../Assets/inpicturemwanza.jpg';
+import InPictureDar from '../Assets/inpicturedaressalaam.jpg';
+import InPictureDodoma from '../Assets/dodomandani.jpg'
+
+import Chikondo from '../Assets/20250820_173018.webp';
+import Johnson from '../Assets/IMG_2158 (1).jpg';
+import Michael from '../Assets/Michael.jpg'
+
 const About = () => {
   const { t } = useLanguage();
 
   const stats = [
-    { label: 'Years in Business', value: '9+' },
+    { label: 'Years in Business', value: '4+' },
     { label: 'Happy Customers', value: '50K+' },
     { label: 'Products Sold', value: '100K+' },
     { label: 'Store Locations', value: '3' },
@@ -14,29 +25,23 @@ const About = () => {
 
   const team = [
     {
-      name: 'John Mwangi',
+      name: 'Michael Mbeti',
       position: 'Store Manager - Dar es Salaam',
-      image: 'https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=300',
-      bio: 'With over 8 years of experience in electronics retail, John leads our flagship store in Dar es Salaam.'
+      image: Michael,
+      bio: '+255 794 982 600'
     },
     {
-      name: 'Sarah Ahmed',
+      name: 'Johnson Isaya',
       position: 'Store Manager - Dodoma',
-      image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=300',
-      bio: 'Sarah brings technical expertise and customer service excellence to our Dodoma location.'
+      image: Johnson,
+      bio: '+255 779 665 922'
     },
     {
-      name: 'Michael Joseph',
+      name: 'Faustine Chikondo',
       position: 'Store Manager - Mwanza',
-      image: 'https://images.pexels.com/photos/1542085/pexels-photo-1542085.jpeg?auto=compress&cs=tinysrgb&w=300',
-      bio: 'Michael has been with Microspace for 6 years and is known for his exceptional product knowledge.'
+      image: Chikondo,
+      bio: '+255 748 442 007'
     },
-    {
-      name: 'Grace Mwalimu',
-      position: 'Technical Support Lead',
-      image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=300',
-      bio: 'Grace heads our technical support team and oversees repair services across all locations.'
-    }
   ];
 
   const values = [
@@ -67,14 +72,14 @@ const About = () => {
       <PageHeader 
         title={t('aboutTitle')}
         subtitle={t('aboutSubtitle')}
-        backgroundImage="https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&w=1200"
+        // backgroundImage="https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&w=1200"
       />
       <div className="py-8 bg-white dark:bg-gray-900 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Image */}
         <div className="mb-12">
           <img
-            src="https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            src = {InPicture}
             alt="Microspace Store"
             className="w-full h-96 object-cover rounded-lg shadow-lg"
           />
@@ -99,19 +104,19 @@ const About = () => {
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">{t('ourStory')}</h2>
               <div className="space-y-4 text-gray-600 dark:text-gray-300">
                 <p>
-                  Microspace was founded in 2015 with a simple mission: to make the latest technology accessible to everyone in Tanzania. What started as a small electronics shop in Dar es Salaam has grown into a trusted network of stores serving customers across the country.
+                  {t('storyOne')}
                 </p>
                 <p>
-                  Our journey began when our founder recognized the need for a reliable electronics retailer that could provide genuine products, competitive prices, and exceptional customer service. Today, we continue to uphold these values while expanding our reach and improving our services.
+                  {t('storyTwo')}
                 </p>
                 <p>
-                  With locations in Dar es Salaam, Dodoma, and Mwanza, we've helped thousands of customers find the perfect technology solutions for their personal and professional needs. From students buying their first laptop to businesses upgrading their IT infrastructure, we're here to help.
+                  {t('storyThree')}
                 </p>
               </div>
             </div>
             <div>
               <img
-                src="https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src={Inpicture2}
                 alt="Microspace History"
                 className="w-full h-80 object-cover rounded-lg shadow-lg"
               />
@@ -128,7 +133,7 @@ const About = () => {
                 <h3 className="text-2xl font-bold text-blue-900 dark:text-blue-100">{t('ourMission')}</h3>
               </div>
               <p className="text-blue-800 dark:text-blue-200">
-                To provide Tanzania with access to the latest technology through quality products, competitive pricing, and exceptional customer service. We aim to be the bridge between global innovation and local needs.
+                {t('storyFour')}
               </p>
             </div>
             <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-8">
@@ -137,7 +142,7 @@ const About = () => {
                 <h3 className="text-2xl font-bold text-green-900 dark:text-green-100">{t('ourVision')}</h3>
               </div>
               <p className="text-green-800 dark:text-green-200">
-                To become East Africa's leading electronics retailer, known for innovation, reliability, and community impact. We envision a future where technology empowers every Tanzanian to achieve their goals.
+                {t('storyFive')}
               </p>
             </div>
           </div>
@@ -162,13 +167,13 @@ const About = () => {
         {/* Team */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">{t('meetOurTeam')}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {team.map((member, index) => (
               <div key={index} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-96 object-cover"
                 />
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{member.name}</h3>
@@ -186,7 +191,7 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="relative overflow-hidden rounded-lg shadow-lg">
               <img
-                src="https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&w=400"
+                src={InPictureDar}
                 alt="Dar es Salaam Store"
                 className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
               />
@@ -197,7 +202,7 @@ const About = () => {
             </div>
             <div className="relative overflow-hidden rounded-lg shadow-lg">
               <img
-                src="https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg?auto=compress&cs=tinysrgb&w=400"
+                src={InPictureDodoma}
                 alt="Dodoma Store"
                 className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
               />
@@ -208,7 +213,7 @@ const About = () => {
             </div>
             <div className="relative overflow-hidden rounded-lg shadow-lg">
               <img
-                src="https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&w=400"
+                src={InPictureMwanza}
                 alt="Mwanza Store"
                 className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
               />

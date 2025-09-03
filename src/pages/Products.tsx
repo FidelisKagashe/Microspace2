@@ -1,9 +1,9 @@
-import Desk1 from '../Assets/Pictures/daniel-eliashevskyi-aTg26S0_OC0-unsplash.jpg';
-import Desk2 from '../Assets/Pictures/domenico-loia-hGV2TfOh0ns-unsplash.jpg';
+import Desk1 from '../Assets/Pictures/87fb2f00-cb3e-407d-abba-92c78f60dfb2.e4d3786ab9c68d9c8b569eaf3b01ecc4.webp';
+import Desk2 from '../Assets/Pictures/Dell-Inspiron-3030-14th-Gen-i3-Desktop.jpg';
 import Desk3 from '../Assets/Pictures/pexels-pixabay-38568.jpg';
-import Mon1 from '../Assets/Pictures/domenico-loia-hGV2TfOh0ns-unsplash.jpg';
-import Mon2 from '../Assets/Pictures/pexels-pixabay-38568.jpg';
-import Mon3 from '../Assets/Pictures/apple-407122_1280.jpg';
+import Mon1 from '../Assets/Pictures/05ersXu1oMXozYJa66i9GEo-47.webp';
+import Mon2 from '../Assets/Pictures/BEST-MONITORS-5504.webp';
+import Mon3 from '../Assets/Pictures/monitors-500x500.webp';
 import Print1 from '../Assets/Pictures/filtergrade-oPyAcpkQch0-unsplash.jpg';
 import Print2 from '../Assets/Pictures/mahrous-houses-5AoOejjRUrA-unsplash.jpg';
 import Print3 from '../Assets/Pictures/pexels-mikhail-nilov-9301887.jpg';
@@ -24,7 +24,7 @@ import Lap2 from '../Assets/Pictures/laptop-1846277_1280.jpg';
 import Lap3 from '../Assets/Pictures/laptop-593327_1280.jpg';
 import Acc1 from '../Assets/Pictures/lenovo-1tb-portable-hard-drive-3688029_1280.jpg';
 import Acc2 from '../Assets/Pictures/headphones-1868612_1280.jpg';
-import Acc3 from '../Assets/Pictures/earphone-3789598_1280.jpg';
+import Acc3 from '../Assets/Pictures/HDD vs SSD - AdobeStock_323405056 2.png';
 import { useLanguage } from '../contexts/LanguageContext';
 import PageHeader from '../components/PageHeader';
 
@@ -78,7 +78,7 @@ const ProductsAd = () => {
       <PageHeader 
         title={t('productsTitle')}
         subtitle={t('productsSubtitle')}
-        backgroundImage="https://images.pexels.com/photos/205421/pexels-photo-205421.jpeg?auto=compress&cs=tinysrgb&w=1200"
+        //backgroundImage="https://images.pexels.com/photos/205421/pexels-photo-205421.jpeg?auto=compress&cs=tinysrgb&w=1200"
       />
     <section className="py-12 bg-gray-50 dark:bg-gray-900 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

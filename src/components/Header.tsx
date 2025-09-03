@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Search, Facebook, Instagram, Twitter, Moon, Sun, Globe } from 'lucide-react';
+import { Menu, X, Phone, Search, Facebook, Instagram, Moon, Sun, Globe } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
 import Logo from '../Assets/ms logo.png';
@@ -31,7 +31,7 @@ const Header: React.FC = () => {
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
-                <span>+255 767 525 234</span>
+                <span>+255 794 982 600</span>
               </div>
               <span className="hidden md:inline">|</span>
               <span className="hidden md:inline">Delivery support</span>
@@ -40,25 +40,20 @@ const Header: React.FC = () => {
             {/* Social Media Icons */}
             <div className="flex items-center space-x-4">
               <a
-                href="#"
+                target="_blank"
+                href="https://www.facebook.com/profile.php?id=61576599515764"
                 className="flex items-center space-x-1 hover:text-blue-200 transition-colors"
               >
                 <Facebook className="h-4 w-4" />
                 <span className="hidden md:inline">Facebook</span>
               </a>
               <a
-                href="#"
+                target="_blank"
+                href="https://www.instagram.com/microspace_tz/"
                 className="flex items-center space-x-1 hover:text-blue-200 transition-colors"
               >
                 <Instagram className="h-4 w-4" />
                 <span className="hidden md:inline">Instagram</span>
-              </a>
-              <a
-                href="#"
-                className="flex items-center space-x-1 hover:text-blue-200 transition-colors"
-              >
-                <Twitter className="h-4 w-4" />
-                <span className="hidden md:inline">Twitter</span>
               </a>
             </div>
           </div>
@@ -118,7 +113,7 @@ const Header: React.FC = () => {
 
             {/* WhatsApp Link */}
             <a
-              href="https://wa.me/255767525234"
+              href="https://wa.me/255794982600"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:flex items-center space-x-2 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors"

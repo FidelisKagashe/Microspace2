@@ -52,7 +52,7 @@ const Services = () => {
       <PageHeader 
         title={t('servicesTitle')}
         subtitle={t('servicesSubtitle')}
-        backgroundImage="https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&w=1200"
+        // backgroundImage="https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&w=1200"
       />
       <div className="py-8 bg-white dark:bg-gray-900 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -73,8 +73,8 @@ const Services = () => {
                   </li>
                 ))}
               </ul>
-              <div className="border-t border-gray-200 dark:border-gray-700 pt-4">
-                <p className="text-blue-600 dark:text-blue-400 font-semibold">{service.pricing}</p>
+              <div className="border-t border-gray-200 dark:border-gray-700">
+                {/* <p className="text-blue-600 dark:text-blue-400 font-semibold">{service.pricing}</p> */}
               </div>
             </div>
           ))}
@@ -103,7 +103,7 @@ const Services = () => {
               <h3 className="font-semibold mb-2 text-gray-900 dark:text-white">{t('callUs')}</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-4">{t('speakWithTeam')}</p>
               <a href="tel:+255123456789" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                +255 123 456 789
+                +255 794 982 600
               </a>
             </div>
             <div className="text-center">
@@ -112,7 +112,7 @@ const Services = () => {
               </div>
               <h3 className="font-semibold mb-2 text-gray-900 dark:text-white">WhatsApp</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-4">{t('quickChatInquiries')}</p>
-              <a href="https://wa.me/255123456789" target="_blank" rel="noopener noreferrer" className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
+              <a href="https://wa.me/255794982600" target="_blank" rel="noopener noreferrer" className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
                 {t('chatNow')}
               </a>
             </div>

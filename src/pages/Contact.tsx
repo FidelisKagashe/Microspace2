@@ -54,7 +54,7 @@ const Contact: React.FC = () => {
       <PageHeader 
         title={t('contactTitle')}
         subtitle={t('contactSubtitle')}
-        backgroundImage="https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg?auto=compress&cs=tinysrgb&w=1200"
+        // backgroundImage="https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg?auto=compress&cs=tinysrgb&w=1200"
       />
       <div className="py-8 bg-white dark:bg-gray-900 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -182,7 +182,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 dark:text-white">{t('phone')}</h3>
-                    <p className="text-gray-600 dark:text-gray-300">+255 123 456 789</p>
+                    <p className="text-gray-600 dark:text-gray-300">+255 794 982 600</p>
                     <p className="text-sm text-gray-500 dark:text-gray-400">{t('monSat')}</p>
                   </div>
                 </div>
@@ -204,7 +204,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 dark:text-white">{t('headOffice')}</h3>
-                    <p className="text-gray-600 dark:text-gray-300">Kariakoo Market, Shop 15</p>
+                    <p className="text-gray-600 dark:text-gray-300">Kariakoo, Uhuru & Likoma</p>
                     <p className="text-gray-600 dark:text-gray-300">Dar es Salaam, Tanzania</p>
                   </div>
                 </div>
@@ -236,7 +236,7 @@ const Contact: React.FC = () => {
                 {t('needImmediateAssistance')}
               </p>
               <a
-                href="https://wa.me/255123456789"
+                href="https://wa.me/255794982600"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors"

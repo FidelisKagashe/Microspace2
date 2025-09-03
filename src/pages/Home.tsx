@@ -8,41 +8,52 @@ import {
   ArrowRight,
   Phone as PhoneIcon,
   Laptop as LaptopIcon,
-  Headphones
+  Headphones,
+  ExternalLink
 } from 'lucide-react';
 
-import LaptopImg from '../Assets/1340815067.usr17748-removebg-preview.png';
-import DesktopImg from '../Assets/Desktop_Removed_Background.png';
+import LaptopImg from '../Assets/HP-OmniBook-Ultra-14inch-Laptop-Next-Gen-AI-PC.png';
+import DesktopImg from '../Assets/des.png';
 import MouseImg from '../Assets/Muse and Keyboard_NoBackground.png';
 import PhonesImg from '../Assets/Phones_Removed_Background.png';
 import Mikes from '../Assets/Mikes_NoBack.png';
-import Ethernet from '../Assets/Ethernet_NoBack.png';
+import Ethernet from '../Assets/epson-colore-printer-inkjet-removebg-preview.png';
+
+import HpVictus from '../Assets/Pictures/hp-victus-16-amd-2023-1.avif';
+import Phone from '../Assets/Pictures/The-best-mid-range-phones-to-buy-in-2025.jpg'
+import HeadPhone from '../Assets/Pictures/pexels-photo-1649771.webp'
 
 const Home: React.FC = () => {
   const { t } = useLanguage();
 
-  // Testimonials data
+  // Helper to get first letter (uppercase)
+  const getInitial = (name: string) => {
+    return name && name.trim().length ? name.trim().charAt(0).toUpperCase() : '?';
+  };
+
+  // Testimonials data (three from screenshot)
   const testimonials = [
     {
-      name: "John Mwangi",
+      name: "Patrick Paul",
+      location: "Arusha",
+      rating: 4,
+      comment: "Another tech place where you will get so much of what you need.",
+      mapLink: "https://maps.app.goo.gl/GVH86ej98HksX86V8"
+    },
+    {
+      name: "Dismas Mmassy",
       location: "Dar es Salaam",
-      rating: 5,
-      comment: "Excellent service! Got my laptop repaired quickly and the price was very reasonable. Highly recommended!",
-      image: "https://images.pexels.com/photos/1542085/pexels-photo-1542085.jpeg?auto=compress&cs=tinysrgb&w=150"
+      rating: 3,
+      comment: "Nice place.",
+      mapLink: "https://maps.app.goo.gl/oUxk9ZX6pLULEDJP7"
     },
     {
-      name: "Sarah Ahmed",
-      location: "Dodoma",
+      name: "dickson mbogela",
+      location: "Moshi",
       rating: 5,
-      comment: "Great selection of phones and accessories. The staff was very helpful in choosing the right device for my needs.",
-      image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150"
-    },
-    {
-      name: "Michael Joseph",
-      location: "Mwanza",
-      rating: 5,
-      comment: "Fast delivery and authentic products. Microspace is my go-to place for all electronics needs.",
-      image: "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=150"
+      comment: "Excellent service — very professional and fast. Highly recommended!",
+      mapLink: "https://maps.app.goo.gl/MPozvgx65xhuHTio9",
+      isNew: true
     }
   ];
 
@@ -71,19 +82,19 @@ const Home: React.FC = () => {
       icon: <LaptopIcon className="h-12 w-12 text-blue-400" />,
       title: t('computersLaptops'),
       description: t('latestModels'),
-      image: "https://images.pexels.com/photos/205421/pexels-photo-205421.jpeg?auto=compress&cs=tinysrgb&w=400"
+      image: HpVictus
     },
     {
       icon: <PhoneIcon className="h-12 w-12 text-blue-400" />,
       title: t('mobilePhones'),
       description: t('smartphonesAccessories'),
-      image: "https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=400"
+      image: Phone
     },
     {
       icon: <Headphones className="h-12 w-12 text-blue-400" />,
       title: t('electronicsAccessories'),
       description: t('cablesChargers'),
-      image: "https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&w=400"
+      image: HeadPhone
     }
   ];
 
@@ -92,12 +103,11 @@ const Home: React.FC = () => {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    // Slide every 4 seconds
     const interval = setInterval(() => {
       setCurrent(prev => (prev + 1) % heroImages.length);
     }, 2000);
     return () => clearInterval(interval);
-  }, []);
+  }, [heroImages.length]);
 
   return (
     <div className="bg-white dark:bg-gray-900 transition-colors">
@@ -122,7 +132,7 @@ const Home: React.FC = () => {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
                 <a
-                  href="https://wa.me/255767525234"
+                  href="https://wa.me/255794982600"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors flex items-center justify-center"
@@ -133,7 +143,6 @@ const Home: React.FC = () => {
             </div>
             {/* Slideshow with slide-in effect */}
             <div className="relative flex justify-center items-center h-96 overflow-hidden">
-              {/* Dotted white circle */}
               <div className="absolute bg-white rounded-full border-2 border-dashed border-white opacity-30 w-72 h-72"></div>
               {heroImages.map((src, idx) => (
                 <img
@@ -141,9 +150,7 @@ const Home: React.FC = () => {
                   src={src}
                   alt="Electronics Showcase"
                   className={`absolute rounded-lg w-auto h-96 object-contain transition-all duration-1000 ease-out ${
-                    idx === current
-                      ? 'opacity-100 translate-x-0'
-                      : 'opacity-0 translate-x-full'
+                    idx === current ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full'
                   }`}
                 />
               ))}
@@ -195,18 +202,57 @@ const Home: React.FC = () => {
       <section className="py-16 bg-white dark:bg-gray-900 transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">{t('whatCustomersSay')}</h2>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">{t('whatCustomersSay')} ?</h2>
             <p className="text-xl text-gray-600 dark:text-gray-300">{t('joinThousands')}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <div className="flex items-center mb-4">
-                  <img src={testimonial.image} alt={testimonial.name} className="w-12 h-12 rounded-full object-cover" />
-                  <div className="ml-4"><h4 className="font-semibold text-gray-900 dark:text-white">{testimonial.name}</h4><p className="text-gray-600 dark:text-gray-300 text-sm">{testimonial.location}</p></div>
+                  {/* Circle initial avatar (blue background, white letter) */}
+                  <div className="w-12 h-12 rounded-full bg-blue-500 text-white flex items-center justify-center font-semibold text-lg">
+                    {getInitial(testimonial.name)}
+                  </div>
+
+                  <div className="ml-4 flex-1">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h4 className="font-semibold text-gray-900 dark:text-white">{testimonial.name}</h4>
+                        <p className="text-gray-600 dark:text-gray-300 text-sm">{testimonial.location}</p>
+                      </div>
+                      {/* show NEW badge if present */}
+                      {testimonial.isNew && (
+                        <span className="ml-3 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                          NEW
+                        </span>
+                      )}
+                    </div>
+                  </div>
                 </div>
-                <div className="flex mb-3">{[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />))}</div>
+
+                <div className="flex mb-3">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+
                 <p className="text-gray-700 dark:text-gray-300">{testimonial.comment}</p>
+
+                {/* Google Maps link (if provided) */}
+                {testimonial.mapLink && (
+                  <div className="mt-4">
+                    <a
+                      href={testimonial.mapLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-blue-500 dark:text-blue-300 hover:underline font-medium"
+                      aria-label={`Open ${testimonial.name} review on Google Maps`}
+                    >
+                      View on Google Maps
+                      <ExternalLink className="ml-2 h-4 w-4" />
+                    </a>
+                  </div>
+                )}
               </div>
             ))}
           </div>

@@ -5,10 +5,10 @@ type Language = 'en' | 'sw';
 interface LanguageContextType {
   language: Language;
   toggleLanguage: () => void;
-  t: (key: string) => string;
+  t: (key: string) => string; // kept permissive as you requested
 }
 
-const translations = {
+const translations: Record<Language, Record<string, string>> = {
   en: {
     // Navigation
     home: 'Home',
@@ -65,14 +65,19 @@ const translations = {
     stayUpdatedNewsletter: 'Subscribe to our newsletter for the latest tech news and exclusive offers',
     
     // Footer
-    companyDescription: "Tanzania's premier electronics retailer, offering the latest technology and exceptional customer service since 2015.",
+    companyDescription: "Tanzania's premier electronics retailer, offering the latest technology and exceptional customer service since 2021.",
     quickLinks: 'Quick Links',
     ourStores: 'Our Stores',
     contactUs: 'Contact Us',
     
     // About page
+    storyOne: 'Microspace was founded in 2021 with a simple mission: to make the latest technology accessible to everyone in Tanzania. What started as a small electronics shop in Dar es Salaam has grown into a trusted network of stores serving customers across the country.',
+    storyTwo: 'Our journey began when our founder recognized the need for a reliable electronics retailer that could provide genuine products, competitive prices, and exceptional customer service. Today, we continue to uphold these values while expanding our reach and improving our services.',
+    storyThree: 'With locations in Dar es Salaam, Dodoma, and Mwanza, we have helped thousands of customers find the perfect technology solutions for their personal and professional needs. From students buying their first laptop to businesses upgrading their IT infrastructure, we are here to help.',
+    storyFour: 'To provide Tanzania with access to the latest technology through quality products, competitive pricing, and exceptional customer service. We aim to be the bridge between global innovation and local needs.',
+    storyFive: "To become East Africa's leading electronics retailer, known for innovation, reliability, and community impact. We envision a future where technology empowers every Tanzanian to achieve their goals.",
     aboutTitle: 'About Microspace',
-    aboutSubtitle: 'Since 2015, Microspace has been Tanzania\'s trusted partner in technology, providing cutting-edge electronics and exceptional service to customers across the country.',
+    aboutSubtitle: 'Since 2021, Microspace has been Tanzania\'s trusted partner in technology, providing cutting-edge electronics and exceptional service to customers across the country.',
     ourStory: 'Our Story',
     ourMission: 'Our Mission',
     ourVision: 'Our Vision',
@@ -81,10 +86,10 @@ const translations = {
     ourStoresGallery: 'Our Stores',
     readyToExperience: 'Ready to Experience Microspace?',
     visitStoreToday: 'Visit one of our stores today and discover why thousands of customers trust us with their technology needs.',
-    qualityAssurance: 'Quality Assurance',
-    qualityAssuranceDesc: 'We only sell authentic products from trusted manufacturers with full warranty support.',
-    customerFirst: 'Customer First',
-    customerFirstDesc: 'Our customers are at the heart of everything we do. Your satisfaction is our priority.',
+    qualityassurance: 'Quality Assurance',
+    qualityassuranceDesc: 'We only sell authentic products from trusted manufacturers with full warranty support.',
+    customerfirst: 'Customer First',
+    customerfirstDesc: 'Our customers are at the heart of everything we do. Your satisfaction is our priority.',
     excellence: 'Excellence',
     excellenceDesc: 'We strive for excellence in product quality, customer service, and technical support.',
     community: 'Community',
@@ -134,7 +139,7 @@ const translations = {
     servicesTitle: 'Our Services',
     servicesSubtitle: 'Comprehensive sales and technology support services tailored to your needs.',
     productSales: 'Product Sales',
-    productSalesDesc: 'High-quality electronics and accessories available for purchase',
+    productSalesDesc: 'Come and get a wide range of electronic devices.',
     technologySupport: 'Technology Support',
     technologySupportDesc: 'Expert assistance for setup, troubleshooting, and optimization',
     expressConsultation: 'Express Consultation',
@@ -170,13 +175,13 @@ const translations = {
     
     // Store Locator page
     storeLocatorTitle: 'Microspace Store Locator',
-    storeLocatorSubtitle: 'Automatically finds your nearest Microspace outlet, shows it on a map, and lets you get turn‑by‑turn directions with one click.',
+    storeLocatorSubtitle: 'Automatically finds your nearest Microspace outlet, shows it on a map, and lets you get turn-by-turn directions with one click.',
     callStore: 'Call Store',
     manager: 'Manager',
     hours: 'Hours',
-    ourFlagshipStore: 'Our flagship store',
-    servingCapital: 'Serving the capital',
-    lakeZoneHeadquarters: 'Lake zone headquarters',
+    ourFlagshipStore: 'Dar es salaam, Kariakoo, Uhuru & Likoma',
+    servingCapital: 'Dodoma mjini, Uhindini Street, Nyerere square',
+    lakeZoneHeadquarters: 'Mwanza, Karuta Street',
     
     // Blog page
     blogTitle: 'Microspace Blog',
@@ -215,7 +220,7 @@ const translations = {
     chatNow: 'Ongea Sasa',
     visitStore: 'Tembelea Duka',
     sendMessage: 'Tuma Ujumbe',
-    downloadCatalog: 'Pakua Katalogi',
+    downloadCatalog: 'Pakua Orodha',
     stayUpdated: 'Baki Umejulishwa',
     enterEmail: 'Ingiza barua pepe yako',
     allRightsReserved: 'Haki zote zimehifadhiwa',
@@ -229,31 +234,36 @@ const translations = {
     ourProductCategories: 'Aina za Bidhaa Zetu',
     exploreWideRange: 'Chunguza aina mbalimbali za elektroniki na vifaa vyetu',
     whatCustomersSay: 'Wateja Wetu Wanasema Nini',
-    joinThousands: 'Jiunge na maelfu ya wateja walioridhi kote Tanzania',
+    joinThousands: 'Jiunge na maelfu ya wateja kote Tanzania',
     freeDelivery: 'Uwasilishaji Bure',
-    freeDeliveryDesc: 'Fungua uwasilishaji bure kwa ununuzi unaofaa, kufanya uzoefu wako wa ununuzi kuwa wa urahisi zaidi',
+    freeDeliveryDesc: 'Fungua fulsa ya kuwasilishiwa biadhaa zako bure kwa ununuzi unaofaa, kufanya uzoefu wako wa ununuzi kuwa wa urahisi zaidi',
     warrantyProtection: 'Ulinzi wa Dhamana',
     warrantyProtectionDesc: 'Ulinzi kamili wa dhamana kwa bidhaa zetu zote',
     expertSupport: 'Msaada wa Kitaalamu',
     expertSupportDesc: 'Msaada wa kitaalamu wa kiufundi na huduma za ukarabati',
-    computersLaptops: 'Kompyuta na Laptops',
+    computersLaptops: 'Kompyuta za mezani na mpakato',
     latestModels: 'Miundo ya hivi karibuni kutoka kwa makampuni makuu',
     mobilePhones: 'Simu za Mkononi',
-    smartphonesAccessories: 'Simu mahiri na vifaa',
-    electronicsAccessories: 'Elektroniki na Vifaa',
-    cablesChargers: 'Kebo, chaja, na mengine',
+    smartphonesAccessories: 'Simu zanye ubora na vifaa',
+    electronicsAccessories: 'Vifaa vya elektroniki',
+    cablesChargers: 'Kebo, chaja, na mengineyo',
     browseProducts: 'Vinjari Bidhaa',
     stayUpdatedNewsletter: 'Jisajili kwenye jarida letu kwa habari za hivi karibuni za teknolojia na matoleo maalum',
     
     // Footer
-    companyDescription: 'Muuzaji mkuu wa elektroniki Tanzania, akitoa teknolojia ya hivi karibuni na huduma bora za wateja tangu 2015.',
+    companyDescription: 'Muuzaji mkuu wa elektroniki Tanzania, akitoa teknolojia ya hivi karibuni na huduma bora za wateja tangu 2021.',
     quickLinks: 'Viungo vya Haraka',
     ourStores: 'Maduka Yetu',
     contactUs: 'Wasiliana Nasi',
     
     // About page
+    storyOne: "Microspace ilianzishwa mnamo 2021 ikiwa na dhamira rahisi: kufanya teknolojia ya kisasa ipatikane kwa kila mtu nchini Tanzania. Microspace ilianza kama duka dogo la vifaa vya elektroniki jijini Dodoma imekua na kuwa na mtandao unaoaminika wa maduka unaohudumia wateja kote nchini.",
+    storyTwo: "Safari yetu ilianza wakati mwanzilishi wetu alipogundua hitaji la muuzaji wa vifaa vya elektroniki anayeaminika ambaye angeweza kutoa bidhaa halisi, bei za ushindani, na huduma bora kwa wateja. Leo, tunaendelea kuzingatia maadili haya huku tukipanua ufikiaji wetu na kuboresha huduma zetu.",
+    storyThree: "Kukiwa na maduka jijini Dar es Salaam, Dodoma, na Mwanza, tumesaidia maelfu ya wateja kupata suluhisho kamili la kiteknolojia kwa mahitaji yao ya kibinafsi na ya kitaaluma. Kuanzia wanafunzi wanaonunua kompyuta zao za kwanza ndogo hadi biashara zinazoboresha miundombinu yao ya TEHAMA, tupo hapa kusaidia.",
+    storyFour: 'Kuwapa Watanzania fursa ya kupata teknolojia ya kisasa kupitia bidhaa zenye ubora, bei za ushindani, na huduma ya kipekee kwa wateja. Tunalenga kuwa daraja kati ya uvumbuzi wa kimataifa na mahitaji ya ndani.',
+    storyFive: 'Kuwa muuzaji mkuu wa vifaa vya elektroniki Afrika Mashariki, anayejulikana kwa ubunifu, kutegemewa, na athari chanya kwa jamii. Tunatazamia siku zijazo ambapo teknolojia itawawezesha Watanzania kufikia malengo yao.',
     aboutTitle: 'Kuhusu Microspace',
-    aboutSubtitle: 'Tangu 2015, Microspace imekuwa mshirika wa kuaminika wa Tanzania katika teknolojia, ikitoa elektroniki za kisasa na huduma bora kwa wateja kote nchini.',
+    aboutSubtitle: 'Tangu 2021, Microspace imekuwa mshirika wa kuaminika wa Tanzania katika teknolojia, ikitoa elektroniki za kisasa na huduma bora kwa wateja kote nchini.',
     ourStory: 'Hadithi Yetu',
     ourMission: 'Dhamira Yetu',
     ourVision: 'Maono Yetu',
@@ -261,13 +271,13 @@ const translations = {
     meetOurTeam: 'Kutana na Timu Yetu',
     ourStoresGallery: 'Maduka Yetu',
     readyToExperience: 'Uko Tayari Kupata Uzoefu wa Microspace?',
-    visitStoreToday: 'Tembelea mojawapo ya maduka yetu leo na ugundua kwa nini maelfu ya wateja wanatuamini kwa mahitaji yao ya teknolojia.',
-    qualityAssurance: 'Uhakikisho wa Ubora',
-    qualityAssuranceDesc: 'Tunauza tu bidhaa halali kutoka kwa wazalishaji wanaoaminika na msaada kamili wa dhamana.',
-    customerFirst: 'Mteja wa Kwanza',
-    customerFirstDesc: 'Wateja wetu ni katika moyo wa kila kitu tunachofanya. Kuridhika kwako ni kipaumbele chetu.',
+    visitStoreToday: 'Tembelea mojawapo ya maduka yetu leo na ugundue kwa nini maelfu ya wateja wanatuamini kwa mahitaji yao ya teknolojia.',
+    qualityassurance: 'Uhakikisho wa Ubora',
+    qualityassuranceDesc: 'Tunauza tu bidhaa halali kutoka kwa wazalishaji wanaoaminika na msaada kamili wa dhamana.',
+    customerfirst: 'Mteja wa Kwanza',
+    customerfirstDesc: 'Wateja wetu ni muhimu kwetu kwa kila kitu tunachofanya. Kuridhika kwako ni kipaumbele chetu.',
     excellence: 'Ubora',
-    excellenceDesc: 'Tunajitahidi kwa ubora katika ubora wa bidhaa, huduma kwa wateja, na msaada wa kiufundi.',
+    excellenceDesc: 'Tunajitahidi katika ubora wa bidhaa, huduma kwa wateja, na msaada wa kiufundi.',
     community: 'Jamii',
     communityDesc: 'Tumejitolea kutumikia jamii ya Tanzania na kuchangia maendeleo ya kidijitali.',
     
@@ -282,47 +292,47 @@ const translations = {
     fullName: 'Jina Kamili',
     emailAddress: 'Anwani ya Barua Pepe',
     phoneNumber: 'Nambari ya Simu',
-    inquiryType: 'Aina ya Ulizo',
+    inquiryType: 'Aina ya uhitaji',
     subject: 'Mada',
     message: 'Ujumbe',
-    generalInquiry: 'Ulizo wa Jumla',
+    generalInquiry: 'Uhitaji wa Jumla',
     technicalSupport: 'Msaada wa Kiufundi',
     salesPricing: 'Mauzo na Bei',
     warrantyClaim: 'Madai ya Dhamana',
     repairService: 'Huduma ya Ukarabati',
     feedback: 'Maoni',
-    pleaseDescribe: 'Tafadhali eleza ulizo lako kwa undani...',
+    pleaseDescribe: 'Tafadhali eleza haja yako kwa undani...',
     phone: 'Simu',
     email: 'Barua Pepe',
     headOffice: 'Ofisi Kuu',
     businessHours: 'Masaa ya Biashara',
-    mondaySaturday: 'Jumatatu - Jumamosi: 8:00 AM - 8:00 PM',
-    sunday: 'Jumapili: 10:00 AM - 6:00 PM',
+    mondaySaturday: 'Jumatatu - Jumamosi: 08:00 AM - 09:00 PM',
+    sunday: 'Jumapili: 08:00 AM - 09:00 PM',
     wellRespondWithin: 'Tutajibu ndani ya masaa 24',
-    monSat: 'Jum-Jum: 8:00 AM - 8:00 PM',
-    sun: 'Jum: 10:00 AM - 6:00 PM',
-    yourEmailAddress: 'Anwani yako ya barua pepe',
+    monSat: 'Jumatatu - Jumapili: 08:00 AM - 09:00 PM',
+    sun: 'Jumapili: 08:00 AM - 09:00 PM',
+    yourEmailAddress: 'Anwani ya barua pepe',
     
     // FAQ page
     faqTitle: 'Maswali Yanayoulizwa Mara kwa Mara',
     faqSubtitle: 'Pata majibu ya maswali ya kawaida kuhusu bidhaa na huduma zetu',
     searchFAQs: 'Tafuta Maswali...',
     stillHaveQuestions: 'Bado una maswali?',
-    cantFindLooking: 'Huwezi kupata unachotafuta? Timu yetu ya msaada iko hapa kusaidia!',
+    cantFindLooking: 'Huwezi kupata unachotafuta? Timu yetu ya msaada iko hapa kukusaidia!',
     noFAQsFound: 'Hakuna maswali yaliyopatikana yanayolingana na vigezo vyako vya utafutaji.',
     
     // Services page
     servicesTitle: 'Huduma Zetu',
-    servicesSubtitle: 'Huduma kamili za mauzo na msaada wa teknolojia zilizobinafsishwa kulingana na mahitaji yako.',
+    servicesSubtitle: 'Huduma kamili za mauzo na msaada wa teknolojia kulingana na mahitaji yako.',
     productSales: 'Mauzo ya Bidhaa',
     productSalesDesc: 'Elektroniki za ubora wa juu na vifaa vinavyopatikana kwa ununuzi',
     technologySupport: 'Msaada wa Teknolojia',
-    technologySupportDesc: 'Msaada wa kitaalamu kwa usanidi, utatuzi wa matatizo, na uboreshaji',
+    technologySupportDesc: 'Msaada wa kitaalamu kwa ufanisi, utatuzi wa matatizo, na uboreshaji',
     expressConsultation: 'Ushauri wa Haraka',
     expressConsultationDesc: 'Vipindi vya msaada vya haraka kwa mahitaji ya dharura',
-    completeProductCatalog: 'Katalogi Kamili ya Bidhaa',
-    downloadLatestCatalog: 'Pakua katalogi yetu ya hivi karibuni yenye bei na maelezo',
-    downloadCatalogPDF: 'Pakua Katalogi (PDF)',
+    completeProductCatalog: 'orodha Kamili ya Bidhaa',
+    downloadLatestCatalog: 'Pakua orodha yetu ya hivi karibuni yenye bei na maelezo',
+    downloadCatalogPDF: 'Pakua orodha (PDF)',
     speakWithTeam: 'Ongea na timu yetu ya mauzo na msaada',
     quickChatInquiries: 'Mazungumzo ya haraka kwa maswali',
     exploreProductsPerson: 'Chunguza bidhaa kwa kibinafsi',
@@ -332,32 +342,32 @@ const translations = {
     productsTitle: 'Aina za Bidhaa Zetu',
     productsSubtitle: 'Karibu kuchunguza aina mbalimbali za bidhaa zinazopatikana katika maduka yetu ya Microspace.',
     desktops: 'Kompyuta za Mezani',
-    desktopsDesc: 'Mashine zenye nguvu za mezani kwa kazi na mchezo.',
+    desktopsDesc: 'Mashine zenye nguvu za mezani kwa kazi na michezo.',
     laptops: 'Kompyuta za Mkononi',
-    laptopsDesc: 'Kompyuta za mkononi zinazobeba na zenye utendaji kwa kila hitaji.',
+    laptopsDesc: 'Kompyuta za mkononi zinazobebeka kirahisi na utendaji bora kwa kila hitaji.',
     mobilePhonesDesc: 'Simu mahiri za hivi karibuni kukuweka umeunganishwa.',
     monitors: 'Skrini',
-    monitorsDesc: 'Mionyo ya wazi na ya kuvutia kwa kila mpangilio.',
+    monitorsDesc: 'Mionekano mizuri na ya kuvutia kwa kila mpangilio.',
     tablets: 'Kompyuta za Mkononi',
     tabletsDesc: 'Kompyuta za mkononi zenye matumizi mengi kwa kazi na burudani.',
-    mouses: 'Panya za Kompyuta',
-    mousesDesc: 'Panya za usahihi kwa michezo na uzalishaji.',
+    mouses: 'Mouse za Kompyuta',
+    mousesDesc: 'Mouse nzuri kwa michezo na uzalishaji.',
     keyboards: 'Kibodi',
-    keyboardsDesc: 'Kibodi za starehe zenye vitufe vya mitambo.',
+    keyboardsDesc: 'Kibodi zenye muonekano mzuri na ubora.',
     printers: 'Printa',
     printersDesc: 'Printa za haraka na za kuaminika kwa nyumbani na ofisini.',
     accessories: 'Vifaa',
-    accessoriesDesc: 'Maikrofoni za ubora wa juu kwa utiririshaji na kurekodi.',
+    accessoriesDesc: 'Karibu ujipatie vifaa mbalimbali vya kielekroniki.',
     
     // Store Locator page
     storeLocatorTitle: 'Kitafuta Duka la Microspace',
-    storeLocatorSubtitle: 'Kinapata kiotomatiki duka la Microspace lililokaribuni nawe, kinalionyesha kwenye ramani, na kinakuruhusu kupata mwelekeo wa hatua kwa hatua kwa kubofya mara moja.',
-    callStore: 'Piga Simu Duka',
+    storeLocatorSubtitle: 'Kinapata kiotomatiki duka la Microspace lililokaribani nawe, kinalionyesha kwenye ramani, na kinakuruhusu kupata mwelekeo wa hatua kwa hatua kwa kubofya mara moja.',
+    callStore: 'Piga Simu Dukani',
     manager: 'Meneja',
     hours: 'Masaa',
-    ourFlagshipStore: 'Duka letu kuu',
-    servingCapital: 'Kutumikia mji mkuu',
-    lakeZoneHeadquarters: 'Makao makuu ya eneo la ziwa',
+    ourFlagshipStore: 'Dar es salaam, Kariakoo, Uhuru & Likoma',
+    servingCapital: 'Dodoma mjini, Uhindini Street, Nyerere square',
+    lakeZoneHeadquarters: 'Mwanza, Karuta Street',
     
     // Blog page
     blogTitle: 'Blogu ya Microspace',
@@ -375,11 +385,14 @@ const translations = {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
+const getInitialLanguage = (): Language => {
+  const saved = localStorage.getItem('language') as Language | null;
+  if (saved === 'en' || saved === 'sw') return saved;
+  return 'en';
+};
+
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>(() => {
-    const saved = localStorage.getItem('language');
-    return (saved as Language) || 'en';
-  });
+  const [language, setLanguage] = useState<Language>(getInitialLanguage);
 
   useEffect(() => {
     localStorage.setItem('language', language);
@@ -389,8 +402,14 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     setLanguage(prev => prev === 'en' ? 'sw' : 'en');
   };
 
+  // runtime-safe t() that accepts any string key (keeps your API the same)
   const t = (key: string): string => {
-    return translations[language][key as keyof typeof translations['en']] || key;
+    const localeObj = translations[language] || {};
+    if (Object.prototype.hasOwnProperty.call(localeObj, key)) {
+      return localeObj[key];
+    }
+    // fallback: return key unchanged so UI shows the key while you migrate/correct
+    return key;
   };
 
   return (

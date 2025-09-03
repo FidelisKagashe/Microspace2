@@ -3,6 +3,10 @@ import { Navigation } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import PageHeader from '../components/PageHeader';
 
+import Dodoma from '../Assets/microspace dodoma.jpg'
+import DarEsSalaam from '../Assets/microspace dar.jpg'
+import Mwanza from '../Assets/microspace mwanza.jpg'
+
 // Define the Store interface
 type Store = {
   id: number;
@@ -22,38 +26,38 @@ const stores: Store[] = [
   {
     id: 1,
     name: 'Microspace Dodoma',
-    address: 'Uhindini, Dodoma, Tanzania',
-    phone: '+255123456790',
+    address: 'Uhindini Street, Nyerere square',
+    phone: '+255779665922',
     email: 'dodoma@microspace.co.tz',
-    hours: { weekdays: '8:00 AM - 8:00 PM', saturday: '8:00 AM - 8:00 PM', sunday: '10:00 AM - 6:00 PM' },
+    hours: { weekdays: '08:00 AM - 09:00 PM', saturday: '08:00 AM - 09:00 PM', sunday: '08:00 AM - 09:00 PM' },
     coordinates: { lat: -6.1783239, lng: 35.7479107 },
-    manager: 'Sarah Ahmed',
-    services: ['Sales', 'Repairs', 'Technical Support'],
-    image: 'https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg'
+    manager: 'Johnson ',
+    services: ['Sales', 'Repairs', 'Technical Support', 'Warranty'],
+    image: Dodoma
   },
   {
     id: 2,
     name: 'Microspace Dar es Salaam',
-    address: 'Kariakoo Market, Dar es Salaam, Tanzania',
-    phone: '+255123456789',
+    address: 'Kariakoo, Uhuru & Likoma',
+    phone: '+255794982600',
     email: 'dar@microspace.co.tz',
-    hours: { weekdays: '8:00 AM - 8:00 PM', saturday: '8:00 AM - 8:00 PM', sunday: '10:00 AM - 6:00 PM' },
+    hours: { weekdays: '08:00 AM - 09:00 PM', saturday: '08:00 AM - 09:00 PM', sunday: '08:00 AM - 09:00 PM' },
     coordinates: { lat: -6.8237541, lng: 39.2730744 },
-    manager: 'John Mwangi',
+    manager: 'Michael Mbeti',
     services: ['Sales', 'Repairs', 'Support', 'Warranty'],
-    image: 'https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg'
+    image: DarEsSalaam
   },
   {
     id: 3,
     name: 'Microspace Mwanza',
-    address: 'Nyerere Road, Mwanza, Tanzania',
-    phone: '+255123456791',
+    address: 'Karuta Street',
+    phone: '+255748442007',
     email: 'mwanza@microspace.co.tz',
-    hours: { weekdays: '8:00 AM - 8:00 PM', saturday: '8:00 AM - 8:00 PM', sunday: '10:00 AM - 6:00 PM' },
+    hours: { weekdays: '08:00 AM - 08:00 PM', saturday: '08:00 AM - 09:00 PM', sunday: '08:00 AM - 09:00 PM' },
     coordinates: { lat: -2.5222568, lng: 32.9006342 },
-    manager: 'Michael Joseph',
+    manager: 'Faustine Chikondo',
     services: ['Sales', 'Repairs', 'Support', 'Warranty'],
-    image: 'https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg'
+    image: Mwanza
   }
 ];
 
@@ -120,7 +124,6 @@ const StoreLocator: React.FC = () => {
       <PageHeader 
         title={t('storeLocatorTitle')}
         subtitle={t('storeLocatorSubtitle')}
-        backgroundImage="https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&w=1200"
       />
       <div className="py-8 bg-white dark:bg-gray-900 transition-colors">
       <div className="max-w-4xl mx-auto px-4">
@@ -132,7 +135,7 @@ const StoreLocator: React.FC = () => {
               onClick={() => setSelectedStore(store)}
               className={`flex-1 py-2 rounded-lg border transition-shadow hover:shadow-md ${
                 store.id === selectedStore.id 
-                  ? 'bg-blue-100 dark:bg-blue-900/30 border-blue-300 dark:border-blue-600' 
+                  ? 'bg-blue-100 dark:bg-blue-900/30 border-blue-300 dark:border-blue-600 text-gray-900 dark:text-white' 
                   : 'bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white'
               }`}
             >
@@ -160,9 +163,9 @@ const StoreLocator: React.FC = () => {
             <img
               src={selectedStore.image}
               alt={selectedStore.name}
-              className="w-32 h-32 object-cover rounded-lg mr-6 mb-4 md:mb-0"
+              className="w-full md:w-1/2 h-full object-cover rounded-lg"
             />
-            <div>
+            <div className='m-4'>
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{selectedStore.name}</h2>
               <p className="text-gray-600 dark:text-gray-300">{selectedStore.address}</p>
             </div>
