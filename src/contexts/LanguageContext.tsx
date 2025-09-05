@@ -134,7 +134,50 @@ const translations: Record<Language, Record<string, string>> = {
     stillHaveQuestions: 'Still have questions?',
     cantFindLooking: 'Can\'t find what you\'re looking for? Our support team is here to help!',
     noFAQsFound: 'No FAQs found matching your search criteria.',
-    
+    all: 'All',
+    orderspayments: 'Orders & Payments',
+    shippingdelivery: 'Shipping & Delivery',
+    returnswarranty: 'Returns & Warranty',
+    accountservices: 'Account & Services',
+
+    // Category keys (ca1..ca8)
+    ca1: 'Orders & Payments',
+    ca2: 'Shipping & Delivery',
+    ca3: 'Returns & Warranty',
+    ca4: 'Orders & Payments',
+    ca5: 'Shipping & Delivery',
+    ca6: 'Account & Services',
+    ca7: 'Orders & Payments',
+    ca8: 'Account & Services',
+
+    // Questions (cq1..cq8)
+    cq1: 'What payment methods do you accept?',
+    cq2: 'Do you offer delivery services?',
+    cq3: 'How long is the warranty coverage?',
+    cq4: 'Can I reserve a product before purchasing?',
+    cq5: 'How long does delivery take?',
+    cq6: 'How can I track my order?',
+    cq7: 'Are your products genuine?',
+    cq8: 'Do you offer bulk arrangements for businesses?',
+
+    // Answers (ans1..ans8)
+    ans1:
+      'We offer a variety of secure payment options for your convenience. Contact our store or message us on WhatsApp and our team will be happy to assist you with available methods.',
+    ans2:
+      'Yes — we offer delivery services. Delivery options and timelines depend on your location — please contact us and we will gladly arrange the most suitable option for you.',
+    ans3:
+      'Warranty coverage typically ranges from 6 months to 2 years, depending on the product and manufacturer. We are happy to support you with warranty claims and assistance when needed.',
+    ans4:
+      'Yes — you may reserve products for up to 24 hours by calling our stores or messaging us on WhatsApp. Please contact us for assistance and we will gladly hold the item for you.',
+    ans5:
+      'Standard delivery within Dar es Salaam, Dodoma, and Mwanza typically takes 1–2 business days. Inter-city delivery may take 2–5 business days. Please reach out for more precise estimates for your area.',
+    ans6:
+      'Once your order is confirmed, you will receive tracking information via SMS or WhatsApp. You may also contact our stores directly and our team will provide an update on your order status.',
+    ans7:
+      'Yes — all our products are authentic and sourced from authorized distributors. We provide official warranty cards and certificates of authenticity where applicable.',
+    ans8:
+      'Yes — we accommodate bulk orders and corporate customers. Kindly contact our sales team to discuss your requirements and we will be pleased to assist with arrangements and account setup.',
+      
     // Services page
     servicesTitle: 'Our Services',
     servicesSubtitle: 'Comprehensive sales and technology support services tailored to your needs.',
@@ -187,7 +230,6 @@ const translations: Record<Language, Record<string, string>> = {
     blogTitle: 'Microspace Blog',
     blogSubtitle: 'Stay updated with the latest technology trends, tips, and news from Tanzania and beyond',
     featured: 'Featured',
-    all: 'All',
     mobileTechnology: 'Mobile Technology',
     computers: 'Computers',
     gaming: 'Gaming',
@@ -320,6 +362,50 @@ const translations: Record<Language, Record<string, string>> = {
     stillHaveQuestions: 'Bado una maswali?',
     cantFindLooking: 'Huwezi kupata unachotafuta? Timu yetu ya msaada iko hapa kukusaidia!',
     noFAQsFound: 'Hakuna maswali yaliyopatikana yanayolingana na vigezo vyako vya utafutaji.',
+    all: 'Zote',
+    orderspayments: 'Maagizo & Malipo',
+    shippingdelivery: 'Usafirishaji & Uwasilishaji',
+    returnswarranty: 'Kurudisha & Dhamana',
+    accountservices: 'Akaunti & Huduma',
+
+    // Category keys (ca1..ca8)
+    ca1: 'Maagizo & Malipo',
+    ca2: 'Usafirishaji & Uwasilishaji',
+    ca3: 'Kurudisha & Dhamana',
+    ca4: 'Maagizo & Malipo',
+    ca5: 'Usafirishaji & Uwasilishaji',
+    ca6: 'Akaunti & Huduma',
+    ca7: 'Maagizo & Malipo',
+    ca8: 'Akaunti & Huduma',
+
+    // Questions (cq1..cq8)
+    cq1: 'Njia gani za malipo mnazokubali?',
+    cq2: 'Je, mnapanga huduma za usafirishaji?',
+    cq3: 'Dhamana inakaa kwa muda gani?',
+    cq4: 'Je, ninaweza kuhifadhi bidhaa kabla ya kununua?',
+    cq5: 'Usafirishaji huchukua muda gani?',
+    cq6: 'Ninafuatilia vipi oda yangu?',
+    cq7: 'Je, bidhaa zenu ni halisi?',
+    cq8: 'Je, mnapokea maagizo ya jumla kwa biashara?',
+
+    // Answers (ans1..ans8)
+    ans1:
+      'Tunakubali njia mbalimbali za malipo za salama. Wasiliana na duka letu au tuma ujumbe kwa WhatsApp na timu yetu itakusaidia.',
+    ans2:
+      'Ndiyo — tunatoa huduma za usafirishaji. Chaguzi za usafirishaji na muda hutegemea eneo lako — tafadhali wasiliana nasi na tutapanga chaguo linalofaa kwako.',
+    ans3:
+      'Dhamana kawaida ni kati ya miezi 6 hadi 2, kulingana na bidhaa na mtengenezaji. Tutakusaidia kwa madai ya dhamana pale inapohitajika.',
+    ans4:
+      'Ndiyo — unaweza kuhifadhi bidhaa kwa hadi saa 24 kwa kupiga simu madukani au kutuma ujumbe kwa WhatsApp. Wasiliana nasi kwa msaada na tutahifadhi bidhaa kwako.',
+    ans5:
+      'Usafirishaji wa kawaida ndani ya Dar es Salaam, Dodoma, na Mwanza huchukua siku 1–2 za kazi. Usafirishaji kati ya miji unaweza kuchukua siku 2–5. Tafadhali wasiliana kwa maelezo kamili kwa eneo lako.',
+    ans6:
+      'Mara baada ya oda kuthibitishwa, utapokea taarifa za ufuatiliaji kupitia SMS au WhatsApp. Pia unaweza kuwasiliana na maduka yetu kwa taarifa za oda yako.',
+    ans7:
+      'Ndiyo — bidhaa zetu ni halisi na zinatoka kwa wasambazaji walioidhinishwa. Tunatoa kadi za dhamana rasmi na vyeti vya uhalisia pale inapofaa.',
+    ans8:
+      'Ndiyo — tunashughulikia maagizo ya jumla na wateja wa kampuni. Wasiliana na timu yetu ya mauzo kujadili mahitaji yako na mipango ya gharama.',
+
     
     // Services page
     servicesTitle: 'Huduma Zetu',
@@ -373,7 +459,6 @@ const translations: Record<Language, Record<string, string>> = {
     blogTitle: 'Blogu ya Microspace',
     blogSubtitle: 'Baki umejulishwa na mitindo ya hivi karibuni ya teknolojia, vidokezo, na habari kutoka Tanzania na zaidi',
     featured: 'Iliyoangaziwa',
-    all: 'Zote',
     mobileechnology: 'Teknolojia ya Simu za Mkononi',
     computers: 'Kompyuta',
     gaming: 'Michezo',

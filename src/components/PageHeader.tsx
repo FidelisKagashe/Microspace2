@@ -1,5 +1,5 @@
 import React from 'react';
-import PictureInHero from '../Assets/picha ya ndani.jpg'
+import PictureInHero from '../Assets/pichayandani.jpg'
 interface PageHeaderProps {
   title: string;
   subtitle?: string;

@@ -3,7 +3,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import PageHeader from '../components/PageHeader';
 
 import InPicture from '../Assets/inpicture.jpg';
-import Inpicture2 from '../Assets/picha ya ndani.jpg'
+import Inpicture2 from '../Assets/pichayandani.jpg';
 
 import InPictureMwanza from '../Assets/inpicturemwanza.jpg';
 import InPictureDar from '../Assets/inpicturedaressalaam.jpg';
@@ -11,7 +11,7 @@ import InPictureDodoma from '../Assets/dodomandani.jpg'
 
 import Chikondo from '../Assets/20250820_173018.webp';
 import Johnson from '../Assets/IMG_2158 (1).jpg';
-import Michael from '../Assets/Michael.jpg'
+import Michael from '../Assets/Michael.jpg';
 
 const About = () => {
   const { t } = useLanguage();
@@ -34,7 +34,7 @@ const About = () => {
       name: 'Johnson Isaya',
       position: 'Store Manager - Dodoma',
       image: Johnson,
-      bio: '+255 779 665 922'
+      bio: '+255 717 808 039'
     },
     {
       name: 'Faustine Chikondo',

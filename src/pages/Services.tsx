@@ -102,7 +102,7 @@ const Services = () => {
               </div>
               <h3 className="font-semibold mb-2 text-gray-900 dark:text-white">{t('callUs')}</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-4">{t('speakWithTeam')}</p>
-              <a href="tel:+255123456789" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+              <a href="+255794982600" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
                 +255 794 982 600
               </a>
             </div>

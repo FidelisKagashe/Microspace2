@@ -176,29 +176,49 @@ const Contact: React.FC = () => {
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 transition-colors">
               <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">{t('getInTouch')}</h2>
               <div className="space-y-6">
-                <div className="flex items-center space-x-4">
+                
+                {/* Phone */}
+                <div className="grid grid-cols-[auto_1fr] gap-4 items-center">
                   <div className="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-lg">
                     <Phone className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 dark:text-white">{t('phone')}</h3>
-                    <p className="text-gray-600 dark:text-gray-300">+255 794 982 600</p>
+                    <a 
+                      href="tel:+255794982600"
+                      className="text-gray-600 dark:text-gray-300 hover:text-blue-500 transition"
+                    >
+                      +255 794 982 600
+                    </a>
                     <p className="text-sm text-gray-500 dark:text-gray-400">{t('monSat')}</p>
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-4">
+                {/* Email */}
+                <div className="grid grid-cols-[auto_1fr] gap-4 items-start">
                   <div className="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-lg">
                     <Mail className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                   </div>
-                  <div>
+                  <div className="space-y-1">
                     <h3 className="font-semibold text-gray-900 dark:text-white">{t('email')}</h3>
-                    <p className="text-gray-600 dark:text-gray-300">info@Microspace.co.tz</p>
+                    <a
+                      href="mailto:info@microspacetechnology.com"
+                      className="block text-sm md:text-base text-gray-600 dark:text-gray-300 hover:text-blue-500 transition break-all"
+                    >
+                      info@microspacetechnology.com
+                    </a>
+                    <a
+                      href="mailto:support@microspacetechnology.com"
+                      className="block text-sm md:text-base text-gray-600 dark:text-gray-300 hover:text-blue-500 transition break-all"
+                    >
+                      support@microspacetechnology.com
+                    </a>
                     <p className="text-sm text-gray-500 dark:text-gray-400">{t('wellRespondWithin')}</p>
                   </div>
                 </div>
-
-                <div className="flex items-start space-x-4">
+                
+                {/* Address */}
+                <div className="grid grid-cols-[auto_1fr] gap-4 items-start">
                   <div className="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-lg">
                     <MapPin className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                   </div>
@@ -209,7 +229,8 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
+                {/* Business Hours */}
+                <div className="grid grid-cols-[auto_1fr] gap-4 items-start">
                   <div className="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-lg">
                     <Clock className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                   </div>
@@ -219,6 +240,7 @@ const Contact: React.FC = () => {
                     <p className="text-gray-600 dark:text-gray-300">{t('sunday')}</p>
                   </div>
                 </div>
+
               </div>
             </div>
             {/* WhatsApp Support */}
